@@ -40,6 +40,36 @@ Universidad Nacional del Nordeste</FONT></b></div>
 <A HREF="dat/Iris.csv">  Iris.csv - datos . </a><br>
 
 
+<hr>
+<ul>
+<h3> Uso de jupyter en el servidor </h3>
+
+
+Para usar jupyter en el servidor realizar:
+
+<div class="org-src-container">
+<pre class="src src-bash">usuario@labif8:~$ ssh -L 8080:localhost:8080 "usuario"@10.40.60.207
+</pre>
+</div>
+Una vez en la terminal del servidor hacer:
+<div class="org-src-container">
+<pre class="src src-bash">usuario@yakaira:~$ jupyter notebook --no-browser --port=8080
+</pre>
+</div>
+
+Va a aparecer un mensaje que dice:
+    To access the notebook, open this file in a browser:
+        file:///home/XXXXX/.local/share/jupyter/runtime/nbserver-xxxx-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8080/?token=0e1b33c2eba504d5d787cdasfdsafe285bb44918dc9dsdfa
+
+
+copiar la linea que dice
+
+http://localhost:8080/?token=xxxxxx
+
+y pastearla en un navegador, firefox, chrome, etc.
+</ul>
 
 <hr>
 <p style="font-size:14px"> <A HREF="https://exa.unne.edu.ar/"> FaCENA - UNNE
