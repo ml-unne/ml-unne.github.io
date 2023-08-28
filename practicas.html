@@ -4,12 +4,11 @@
 <title> 
 Aprendizaje Automatico - Machine Learning, FaCENA, UNNE
 </title>
-<style type="text/css">
-<!-- @import url('/software/emacs/manual.css'); -->
-@import url('./style.css');
-</style>
 <link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<style type="text/css">
+@import url('./style.css');
+</style>
 <script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
 <script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
@@ -33,25 +32,36 @@ Universidad Nacional del Nordeste</FONT></b></div>
 </div> <!-- <img src="facena.png" align="left" width="300" /> -->
 
 
- <br>
 <br>
- <br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
+<hr>
 
 
-<li> <h3><A HREF="doc/guia_intro_python.pdf">   Guia 1. Introduccion a python. </a><br></li>
+<li> <h3><A HREF="doc/guia_intro_python.pdf">   Guia 1. Introducción a python. </a><br></li>
 
 
 <A HREF="dat/Iris.csv">  Iris.csv - datos . </a><br>
+<hr>
+<li> <h3><A HREF="doc/guia_estadistica.ipynb">   Guia 2. Estadística. </a><br></li>
+
+<A HREF="dat/Datos_est.csv">  Datos_est.csv - Datos estaciones meteorológicas . </a><br>
 
 
 <hr>
 <ul>
-<h3> Uso de jupyter en el servidor </h3>
+<h3> Uso de jupyter  </h3>
 
+Hay dos alternativas, usar el google-colab, para esto hay que subir el archivo al google-drive.<br>
 
-Para usar jupyter en el servidor realizar:
+https://colab.research.google.com <br>
+
+<br>
+La otra opción es usar un servidor. Para usar jupyter en el servidor realizar:<br>
 
 <div class="org-src-container">
 <pre class="src src-bash">usuario@labif8:~$ ssh -L 8080:localhost:8080 "usuario"@10.40.60.207
@@ -76,6 +86,69 @@ http://localhost:8080/?token=xxxxxx<br>
 <br>
 y pastearla en un navegador, firefox, chrome, etc.<br>
 </ul>
+<hr>
+<ul>
+<h3> Uso del servidor desde afuera de la facultad  </h3>
+
+Para acceder desde afuera de la facultad es necesario ingresar primero al servidor publico 200.45.54.94:
+
+
+<div class="org-src-container">
+<pre class="src src-bash"> ssh usuario@200.45.54.94
+</pre>
+
+Una vez que ingreso al servidor publico, debe ingresar al servidor de ML, 10.40.60.207,
+
+
+<div class="org-src-container">
+<pre class="src src-bash"> ssh usuario@10.40.60.207
+</pre>
+
+<hr>
+
+Para usar jupyter desde afuera de la facultad.
+
+<ol class="org-ol">
+<li>Me conecto al servidor público,  y luego al servidor de ML:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash">ssh -4fNL 2222:10.40.60.207:22 -4fNL 8080:10.40.60.207:8080 200.45.54.94
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Luego abro la conexion en la maquina local</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-bash">ssh -p 2222 localhost
+</pre>
+</div>
+
+
+<ol class="org-ol">
+<li>Abrir una jupyter notebook sin browser:</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-bash">jupyter notebook --no-browser --port=8080 --ip=0.0.0.0 
+</pre>
+</div>
+
+<p>
+Copiar el token que aparece.
+</p>
+
+<ol class="org-ol">
+<li><p>
+En la maquina local en el browser:
+<a href="http://localhost:8889/?token=8d186032bbbe095b294789e863b065a546fcc15b68683c88">http://localhost:8889/?token=8d186032bbbe095b294789e863b065a546fcc15b68683c88</a>
+</p>
+
+<p>
+(el token lo tengo que copiar del servidor remoto).
+</p></li>
+</ol>
 
 <hr>
 <p style="font-size:14px"> <A HREF="https://exa.unne.edu.ar/"> FaCENA - UNNE
