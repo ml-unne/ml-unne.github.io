@@ -264,6 +264,120 @@ Examen final
 </div>
 <br>
 
+
+<h2> Proyectos finales
+</h2>
+
+
+<h3> Optimización y aplicación de SVMs en la clasificación de datos biomédicos</h3>
+
+
+
+<ol type="1">
+  <li> El conjunto de datos "Heart Disease UCI" se enfoca en la clasificación de pacientes en función de la presencia o ausencia de enfermedades cardíacas. Contiene una variedad de características clínicas y biomédicas que se utilizan para predecir si un paciente tiene una enfermedad cardíaca. Este conjunto de datos es útil para aplicaciones de diagnóstico y pronóstico de enfermedades cardíacas.
+
+Acceder al conjunto de datos "Heart Disease UCI"  a través del siguiente enlace: 
+ <A HREF="https://drive.google.com/file/d/1qbJLEk0gMUo3M82rmEDyXzgOSRVfWz-W/view"> Base de datos - G-drive</a>
+ 
+<li> Preprocesar el conjunto de datos  (ej. eliminar muestras con valores faltantes, y escalar/normalizar las variables de entrada) </li>
+
+<li> Realizar un análisis exploratorio de los datos (ej. calcular la matriz de correlación para identificar las variables más importantes, verificar que las clases estén balanceadas)</li>
+
+<li> Empleando el conjunto de entrenamiento, utilizar la función GridSearchCV para  encontrar el mejor conjunto de hiperparámetros para el modelo de SVM. Ajustar los siguientes hiperparámetros: C, kernel, gamma, degree</li>
+
+<li>  Evalúa el rendimiento del modelo con los mejores hiperparámetros en el conjunto de prueba. </li>
+
+<li> Calcula la matriz de confusión para el conjunto de entrenamiento y de prueba.</li>
+</ol>
+
+<h3>  Clasificación de tormentas a partir de la base de datos CIKM.</h3>
+
+La base de datos CIKM posee imagenes de un radar meteorológico con la evolución de la tormenta, a través de la reflectividad en una secuencia de 90 minutos. Esta base de datos fue utilizada por la empresa Alibaba para una competencia de predicción de tormentas a corto plazo (nowcasting) con técnicas de deep learning. Base de datos a proveer.
+
+<ol type="1">
+
+<li>  Realice un código para la lectura de la base de datos a partir de imágenes PNG.</li>
+<li>  Realice una reducción de la dimensionalidad a partir de usar secuencias de longitud variada de los distintos eventos. Compare las tecnicas de PCA, T-NSE y UMAP.</li>
+<li>  A partir de la representación en baja dimensionalidad realice un clustering de los tipos de tormentas utilizando K-MEANS y HDBSCAN. Compare.</li>
+<li>  Realice un análisis de las características de cada cluster.</li>
+   </ol>
+
+
+<h3> Arboles y bosques aleatorios aplicados a monitoreo de Parkinsons</h3>
+
+<ol type="1">
+<li> Definir el pipeline [metodología] que utilizará para experimentar en la construcción y
+comprensión de los modelos a implementar</li>
+<li> Bajar la base de datos Parkisons Telemonitoring</li>
+<A HREF="https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring"> Base de datos - UCI</a>
+<li> Construcción, experimentación y análisis de modelos</li>
+- Construir 2 modelos de árboles de decisión y 2 modelos de bosques aleatorios.<br>
+- En cada uno de los modelos [1 fila de la tabla] experimentar con diferentes valores de
+hiperparámetros, según la técnica de ML utilizada. Ejecutar el código con diferentes
+configuraciones y observar los valores de la(s) métrica(s) seleccionadas<br>
+-  Analizar los resultados, Construir una tabla [cada modelo representado en 1 fila de la
+tabla], Indicar: i) valores de hiperparámetros modificados en columnas correspondientes. ii)
+valores de métricas seleccionadas para apoyar la toma de decisiones.<br>
+- Proponer el modelo más adecuado. Especificar el criterio sobre el cual basa su decisión<br>
+ </ol>
+
+<h3> Redes convolucionales aplicadas a caras</h3>
+
+<ol type="1">
+<li> Definir el pipeline [metodología] que utilizará para experimentar en la construcción y
+comprensión de los modelos, basados en redes convolucionales con arquitecturas ALEXNET a implementar</li>
+<li> Bajar la base de datos Face Images</li>
+ <A HREF="https://archive.ics.uci.edu/dataset/124/cmu+face+images"> Base de datos - UCI</a>
+<li> Construcción, experimentación y análisis de modelos</li>
+- Construir 2 modelos de árboles de decisión y 2 modelos de bosques aleatorios.<br>
+- En cada uno de los modelos [1 fila de la tabla] experimentar con diferentes valores de
+hiperparámetros, según la técnica de ML utilizada. Ejecutar el código con diferentes
+configuraciones y observar los valores de la(s) métrica(s) seleccionadas.<br>
+-  Analizar los resultados, Construir una tabla [cada modelo representado en 1 fila de la
+tabla], Indicar: i) valores de hiperparámetros modificados en columnas correspondientes. ii)
+valores de métricas seleccionadas para apoyar la toma de decisiones.<br>
+- Proponer el modelo más adecuado. Especificar el criterio sobre el cual basa su decisión<br>
+ </ol>
+<h3>  Identificación de nubes de tormentas a partir de imágenes del satélite LandSat</h3>
+
+
+Usando la base de datos de las imágenes del satelite LandSat-8 se propone identificar las nubes de tormenta para luego clasificar que tipo de tormenta tenemos usando una arquitectura UNET.
+
+<ol type="1">
+  <li> Baje los datos correspondientes que estan disponibles en la plataforma kaggle:</li>
+    
+<A HREF="https://www.kaggle.com/datasets/sorour/38cloud-cloud-segmentation-in-satellite-images"> Base de datos - Kaggle</a>
+
+ <li> Realice un chequeo y primer analisis de la base de datos.</li>
+
+   <li> Desarrolle una arquitectura UNET, utilizando de base el codigo del práctico Modulo 9.</li>
+  <li> Baje los datos correspondientes que estan disponibles en la plataforma kaggle:</li>
+
+ <li>  Entrene la red para la segmentación de las imágenes y la detección de las nubes.</li>
+   3.1 Analice que función de costo sería la mas conviente para el problema.<br>
+   3.2 Compare la peformance de la convolución transpuesta con la transformación bilineal en el upscaling.<br>
+
+ <li>  Analizar los tamaños y cantidades de nubes encontrados en las imágenes.</li>
+</ol>
+
+
+
+
+ <h3> Clasificación de abstracts de publicaciones científicas.</h3>
+   
+Se propone un método automático que nos permita clasificar los temas de un conjunto de abstracts de publicaciones.
+
+Puede utilizar el paquete de github BERT-topic para realizar el proyecto final (sin ser obligatorio). Base a proveer.
+
+<ol type="1">
+<li> Cargue la base de datos y haga un primer análisis general de los abstracts.</li>
+<li> Realice un embedding de los textos a un espacio vectorial. Propuestas: puede usar skip-gram/word2vec o BERT para realizar esto (un desafío mayor pero que también factible seria el uso de Llama).</li>
+<li> Realice una reducción de dimensionalidad a través de PCA, T-NSE o UMAP.</li>
+<li> Utilice metodos de clusterización para dividir los abstracts por tópicos. Puede comparar las performances de por ejemplo K-Means con HDBSCAN</li>
+<li> Con tf-idf puede determinar de que esta hablando cada grupo de clusters.</li>
+</ol>
+
+
   
 <br>
 
